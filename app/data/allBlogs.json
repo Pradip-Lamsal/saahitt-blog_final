@@ -1,0 +1,108 @@
+{
+  "allBlogPosts": [
+    {
+      "id": 1,
+      "title": "How to Build a Strong Event Team: Roles and Responsibilities",
+      "category": "Corporate",
+      "image": {
+        "src": "/ravi1.jpg",
+        "alt": "Event team planning"
+      },
+      "excerpt": "Learn how to assemble and organize an effective event team with clearly defined roles for seamless execution.",
+      "date": "Apr 23, 2023",
+      "author": "Raj Kapoor",
+      "views": 218
+    },
+    {
+      "id": 2,
+      "title": "Innovative Ideas for Virtual Events That Will Captivate Your Audience",
+      "category": "Corporate",
+      "image": {
+        "src": "/inbloom4.jpg",
+        "alt": "Virtual event planning"
+      },
+      "excerpt": "Discover creative approaches to make your virtual events more engaging and memorable for remote participants.",
+      "date": "Apr 23, 2023",
+      "author": "Priya Sharma",
+      "views": 342
+    },
+    {
+      "id": 3,
+      "title": "How to Measure the Success of Your Event: Key Metrics to Track",
+      "category": "Corporate",
+      "image": {
+        "src": "/kippa3.png",
+        "alt": "Event metrics and success"
+      },
+      "excerpt": "Understand the most important KPIs to evaluate your event's performance and demonstrate ROI to stakeholders.",
+      "date": "Apr 23, 2023",
+      "author": "Vikram Mehta",
+      "views": 187
+    },
+    {
+      "id": 4,
+      "title": "Tips for Managing Event Logistics Like a Pro",
+      "category": "Corporate",
+      "image": {
+        "src": "/lord3.jpg",
+        "alt": "Event logistics management"
+      },
+      "excerpt": "Master the complex logistics of event planning with these professional strategies and best practices.",
+      "date": "Apr 23, 2023",
+      "author": "Neha Joshi",
+      "views": 264
+    },
+    {
+      "id": 5,
+      "title": "The Importance of Networking at Events: Tips for Making Connections",
+      "category": "Corporate",
+      "image": {
+        "src": "/lavish.png",
+        "alt": "Event networking"
+      },
+      "excerpt": "Learn how to create meaningful networking opportunities that deliver value to your event attendees.",
+      "date": "Apr 23, 2023",
+      "author": "Ananya Desai",
+      "views": 195
+    },
+    {
+      "id": 6,
+      "title": "How to Handle Last-Minute Changes During Event Planning",
+      "category": "Corporate",
+      "image": {
+        "src": "/lagan3.jpg",
+        "alt": "Last-minute event changes"
+      },
+      "excerpt": "Develop contingency plans and adaptability strategies to manage unexpected changes to your event.",
+      "date": "Apr 23, 2023",
+      "author": "Sanjay Patel",
+      "views": 210
+    },
+    {
+      "id": 7,
+      "title": "Sustainable Event Planning: How to Go Green",
+      "category": "Corporate",
+      "image": {
+        "src": "/lord3.jpg",
+        "alt": "Sustainable event planning"
+      },
+      "excerpt": "Implement eco-friendly practices in your events to reduce environmental impact while enhancing brand reputation.",
+      "date": "Apr 23, 2023",
+      "author": "Leela Krishnan",
+      "views": 178
+    },
+    {
+      "id": 8,
+      "title": "Creating Memorable Experiences: The Role of Entertainment in Events",
+      "category": "Corporate",
+      "image": {
+        "src": "/junkiri4.jpg",
+        "alt": "Event entertainment"
+      },
+      "excerpt": "Discover how strategic entertainment choices can elevate your event and create lasting impressions.",
+      "date": "Apr 23, 2023",
+      "author": "Arjun Singh",
+      "views": 228
+    }
+  ]
+} 

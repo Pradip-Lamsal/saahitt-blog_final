@@ -1,0 +1,76 @@
+{
+  "serviceCategories": [
+    {
+      "id": 1,
+      "title": "Wedding Planners",
+      "vendorCount": 61,
+      "image": {
+        "src": "/weddingplanner.png",
+        "alt": "Wedding Planners"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Makeup Artists",
+      "vendorCount": 131,
+      "image": {
+        "src": "/glow1.jpg",
+        "alt": "Makeup Artists"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Mehendi Artists",
+      "vendorCount": 75,
+      "image": {
+        "src": "/mehendi.jpg",
+        "alt": "Mehendi Artists"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Dress Designers",
+      "vendorCount": 24,
+      "image": {
+        "src": "/dressdesigner.png",
+        "alt": "Dress Designers"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Photographers",
+      "vendorCount": 210,
+      "image": {
+        "src": "/photographer.jpg",
+        "alt": "Photographers"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Decorators",
+      "vendorCount": 81,
+      "image": {
+        "src": "/decoretor.jpg",
+        "alt": "Decorators"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Pandits",
+      "vendorCount": 59,
+      "image": {
+        "src": "/pandit.jpg",
+        "alt": "Pandits"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Invitation Cards",
+      "vendorCount": 31,
+      "image": {
+        "src": "/card.png",
+        "alt": "Invitation Cards"
+      }
+    }
+  ]
+} 

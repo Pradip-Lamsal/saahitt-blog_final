@@ -1,0 +1,123 @@
+{
+  "trendingPosts": [
+    {
+      "id": 1,
+      "title": "10 Creative Event Themes to Make Your Next Gathering Unforgettable",
+      "category": "Corporate",
+      "image": {
+        "src": "/ravi1.jpg",
+        "alt": "Creative Wedding Themes"
+      },
+      "excerpt": "Discover unique and memorable event themes that will leave a lasting impression on your guests.",
+      "date": "Apr 23, 2023",
+      "author": "Priya Sharma",
+      "views": 245
+    },
+    {
+      "id": 2,
+      "title": "How to Choose the Perfect Venue for Your Event: Tips and Tricks",
+      "category": "Corporate",
+      "image": {
+        "src": "/junkiri4.jpg",
+        "alt": "Perfect Venue Selection"
+      },
+      "excerpt": "Learn how to select the ideal venue that aligns with your event's goals, guest count, and budget.",
+      "date": "Apr 23, 2023",
+      "author": "Raj Kapoor",
+      "views": 312
+    },
+    {
+      "id": 3,
+      "title": "Essential Checklist for Planning a Successful Corporate Event",
+      "category": "Corporate",
+      "image": {
+        "src": "/kippa3.png",
+        "alt": "Corporate Event Planning"
+      },
+      "excerpt": "A comprehensive guide to ensure nothing is overlooked when planning your next corporate gathering.",
+      "date": "Apr 23, 2023",
+      "author": "Ananya Desai",
+      "views": 189
+    },
+    {
+      "id": 4,
+      "title": "Top 5 Trends in Event Management You Need to Know",
+      "category": "Corporate",
+      "image": {
+        "src": "/lavish.png",
+        "alt": "Event Management Trends"
+      },
+      "excerpt": "Stay ahead of the curve with these emerging trends that are reshaping the event management industry.",
+      "date": "Apr 23, 2023",
+      "author": "Neha Joshi",
+      "views": 173
+    },
+    {
+      "id": 5,
+      "title": "How to Effectively Promote Your Event on Social Media",
+      "category": "Corporate",
+      "image": {
+        "src": "/lagan3.jpg",
+        "alt": "Event Social Media Promotion"
+      },
+      "excerpt": "Maximize attendance and engagement with these proven social media strategies for event promotion.",
+      "date": "Apr 23, 2023",
+      "author": "Vikram Mehta",
+      "views": 204
+    },
+    {
+      "id": 6,
+      "title": "The Ultimate Guide to Budgeting for Your Next Event",
+      "category": "Corporate",
+      "image": {
+        "src": "/lord3.jpg",
+        "alt": "Event Budgeting"
+      },
+      "excerpt": "Learn how to create a comprehensive budget that covers all aspects of your event without overspending.",
+      "date": "Apr 23, 2023",
+      "author": "Sanjay Patel",
+      "views": 156
+    },
+    {
+      "id": 7,
+      "title": "How to Create Engaging Content for Your Event's Website",
+      "category": "Corporate",
+      "image": {
+        "src": "/inbloom4.jpg",
+        "alt": "Event Website Content"
+      },
+      "excerpt": "Tips for developing compelling website content that drives registration and builds excitement.",
+      "date": "Apr 23, 2023",
+      "author": "Leela Krishnan",
+      "views": 142
+    }
+  ],
+  "recentPosts": [
+    {
+      "id": 8,
+      "title": "Wedding Color Palettes That Never Go Out of Style",
+      "category": "Design & Decor",
+      "image": {
+        "src": "/inbloom4.jpg",
+        "alt": "Wedding Color Palette"
+      },
+      "excerpt": "Discover timeless color combinations that will make your wedding aesthetically pleasing and eternally stylish.",
+      "date": "Feb 10, 2024",
+      "author": "Neha Joshi",
+      "views": 173
+    },
+    {
+      "id": 9,
+      "title": "Understanding Venue Contracts: What to Look For",
+      "category": "Legal",
+      "image": {
+        "src": "/lavish.png",
+        "alt": "Venue Contract"
+      },
+      "excerpt": "A comprehensive guide to understanding the fine print in venue contracts so you don't face surprises later.",
+      "date": "Feb 28, 2024",
+      "author": "Vikram Mehta",
+      "views": 204
+    }
+  ]
+} 

@@ -1,0 +1,49 @@
+{
+  "galleryImages": [
+    {
+      "src": "/ravi1.jpg",
+      "alt": "Wedding venue 1",
+      "title": "Ravi"
+    },
+    {
+      "src": "/kippa3.png",
+      "alt": "Wedding venue 2",
+      "title": "Kippa"
+    },
+    {
+      "src": "/junkiri4.jpg",
+      "alt": "Wedding venue 3",
+      "title": "Junkiri"
+    },
+    {
+      "src": "/lord3.jpg",
+      "alt": "Wedding venue 4",
+      "title": "Lord"
+    },
+    {
+      "src": "/lagan3.jpg",
+      "alt": "Wedding venue 5",
+      "title": "Lagan"
+    },
+    {
+      "src": "/inbloom4.jpg",
+      "alt": "Wedding venue 6",
+      "title": "Inbloom"
+    },
+    {
+      "src": "/lavish.png",
+      "alt": "Wedding venue 7",
+      "title": "Lavish"
+    }
+  ],
+  "featuredPost": {
+    "image": {
+      "src": "/ravi1.jpg",
+      "alt": "Wedding couple"
+    },
+    "category": "Wedding",
+    "title": "How to find a Perfect venue for your dream event? 15 things to consider",
+    "content": "Finding the ideal venue for your dream event can feel overwhelming, but it doesn't have to be! Start by envisioning the atmosphere you want to create—whether it's elegant, casual, or themed. Consider the size of your guest list; a venue should comfortably accommodate everyone. Don't forget about the location—accessibility is key for your attendees.",
+    "views": 367
+  }
+} 
