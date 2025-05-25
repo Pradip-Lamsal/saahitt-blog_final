@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Banner from './Banner';
 import categoriesData from '../data/serviceCategories.json';
 
 
@@ -18,6 +19,7 @@ const ServiceCategories = () => {
       <h2 className="text-4xl font-bold mb-8 text-[#5A3E14] text-center">
         Explore our service Categories, best suited to your needs
       </h2>
+      <Banner />
       
       {/* Container for the scrolling animation */}
       <div className="relative w-full">

@@ -2,11 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import blogsData from '../data/allBlogs.json';
 
-/**
- * AllBlogs Component
- * 
- * Displays a grid of all blog posts with consistent styling
- */
+
 const AllBlogs = () => {
   const { allBlogPosts } = blogsData;
 
