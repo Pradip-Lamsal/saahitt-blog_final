@@ -1,3 +1,5 @@
+import { fontFamily } from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        manrope: ['var(--font-manrope)', ...fontFamily.sans],
+        domine: ['var(--font-domine)', ...fontFamily.serif],
+        recoleta: ['Recoleta', 'serif'],
       colors: {
         amber: {
           500: '#F2AE30', // Color for the Saahitt logo
@@ -15,5 +21,6 @@ module.exports = {
       },
     },
   },
+},
   plugins: [],
 } 

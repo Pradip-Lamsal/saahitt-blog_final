@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "./components/Header";
+import { Domine, Geist, Geist_Mono, Manrope } from "next/font/google";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { recoleta } from "./fonts";
+import "./globals.css";
 
 /**
  * Font configuration
@@ -17,6 +18,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
+const domine = Domine({
+  variable: "--font-domine",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 /**
  * Metadata for the website
  */
@@ -27,7 +40,7 @@ export const metadata: Metadata = {
 
 /**
  * Root Layout
- * 
+ *
  * This component wraps all pages and includes:
  * - Global fonts
  * - Header component
@@ -40,7 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
+      <body
+        className={`${geistSans.variable} ${manrope.variable} ${domine.variable} ${geistMono.variable} ${recoleta.variable} antialiased bg-white`}
+      >
         {/* Global Header */}
         <Header />
         {/* Page Content */}

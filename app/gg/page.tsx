@@ -1,106 +1,216 @@
-// Banner component with a layered design
-const Banner = () => {
-  // Style objects for readability
-  const styles = {
-    // Container styles
-    container: "relative w-full max-w-[1000px] mx-auto my-16 px-5 flex items-center justify-center",
-    
-    // Layer styles
-    bottomLayer: "absolute w-[80%] h-[290px] bg-[#f0ac41] rounded-[28px] opacity-60 z-[1]",
-    middleLayer: "absolute w-[90%] h-[255px] bg-[#f3b84e] rounded-[28px] opacity-80 z-[2]",
-    mainLayer: "relative w-full h-[230px] bg-[#f6bc4e] rounded-[28px] shadow-lg z-[3] flex flex-col items-center justify-center p-8",
-    
-    // Content styles
-    contentWrapper: "text-center",
-    subtitleWrapper: "flex items-center justify-center gap-3 mb-2",
-    decorativeLine: "w-16 h-[1px] bg-[#8b4513] opacity-50",
-    subtitleText: "text-[#8b4513] text-sm font-medium",
-    mainHeading: "text-3xl font-semibold text-[#654321] mb-2",
-    description: "text-sm text-[#8b4513] opacity-85 mb-6 max-w-[600px] mx-auto",
-    
-    // Form styles
-    formWrapper: "flex items-center justify-center gap-4 w-full",
-    labelText: "text-base font-medium text-[#8b4513]",
-    dropdownButton: "flex items-center gap-2 px-4 py-2 bg-white/25 border border-white/40 rounded-xl text-[#8b4513] font-medium min-w-[140px] justify-center",
-    submitButton: "flex items-center gap-2 px-4 py-2 bg-white rounded-xl text-[#8b4513] font-medium shadow-sm",
-    icon: "w-4 h-4 opacity-70"
+"use client";
+
+import { HeartIcon } from "@heroicons/react/24/outline";
+import { HeartIcon as HeartIconSolid } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const ServicesPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState(
+    "Photography & Videography"
+  );
+  const [favorites, setFavorites] = useState<number[]>([]);
+
+  const categories = [
+    { id: "pandits", name: "Pandits", count: 120 },
+    { id: "photography", name: "Photography & Videography", count: 6 },
+    { id: "makeup", name: "Makeup", count: 10 },
+    { id: "event-hosting", name: "Event Hosting", count: 8 },
+    { id: "sound-dj", name: "Sound & DJ", count: 4 },
+  ];
+
+  const services = [
+    {
+      id: 1,
+      name: "Samir Photography",
+      price: 3400,
+      category: "photography",
+      image: "/image205.png",
+    },
+    {
+      id: 2,
+      name: "Manjil Photo Studio",
+      price: 3900,
+      category: "photography",
+      image: "/image204.png",
+    },
+    {
+      id: 3,
+      name: "Bright Vision Studio",
+      price: 4000,
+      category: "photography",
+      image: "/image208.png",
+    },
+    {
+      id: 4,
+      name: "Maneer Studios",
+      price: 2500,
+      category: "photography",
+      image: "/image207.png",
+    },
+    {
+      id: 5,
+      name: "Photographers",
+      subtext: "120 available",
+      category: "photography",
+      featured: true,
+      image: "/image6.png",
+    },
+  ];
+
+  const toggleFavorite = (id: number) => {
+    setFavorites((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
 
+  const filteredServices = services.filter((service) => {
+    const selectedCategoryId = categories.find(
+      (cat) => cat.name === selectedCategory
+    )?.id;
+    return service.category === selectedCategoryId;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return 0;
+  });
+
   return (
-    // Main container - holds all three layers
-    <div className={styles.container} style={{ height: '340px' }}>
-      {/* Bottom layer - golden background layer (smallest width, tallest height) */}
-      <div className={styles.bottomLayer}></div>
-
-      {/* Middle layer - medium golden layer */}
-      <div className={styles.middleLayer}></div>
-
-      {/* Main content layer - top golden layer (widest width) */}
-      <div className={styles.mainLayer}>
-        <div className={styles.contentWrapper}>
-          {/* Title section with decorative lines */}
-          <div className={styles.subtitleWrapper}>
-            <span className={styles.decorativeLine}></span>
-            <span className={styles.subtitleText}>Customize your Experience</span>
-            <span className={styles.decorativeLine}></span>
-          </div>
-
-          {/* Main heading */}
-          <h1 className={styles.mainHeading}>
-            What are you Looking for?
-          </h1>
-
-          {/* Description text */}
-          <p className={styles.description}>
-            Explore our dedicated vendors & services curated just for you
-          </p>
-
-          {/* Search form with dropdowns */}
-          <div className={styles.formWrapper}>
-            {/* First label */}
-            <span className={styles.labelText}>I am looking for</span>
-
-            {/* Vendors dropdown */}
-            <div>
-              <button type="button" className={styles.dropdownButton}>
-                <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Select Vendors
-                <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Second label */}
-            <span className={styles.labelText}>in / around</span>
-
-            {/* Location dropdown */}
-            <div>
-              <button type="button" className={styles.dropdownButton}>
-                <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                Select Location
-                <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Submit button */}
-            <button type="submit" className={styles.submitButton}>
-              Personalize my Experience
-              <svg className={styles.icon} fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-              </svg>
-            </button>
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* Header Section */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+          <span className="font-semibold">Our Services</span>
+          <div className="flex items-center">
+            <div className="h-1.5 w-1.5 rounded-full bg-black"></div>
+            <div className="h-[1px] bg-gray-400 w-64"></div>
           </div>
         </div>
+        <h1 className="text-3xl md:text-4xl font-semibold text-amber-900 mb-1 font-domine">
+          Services : From Pandits to Cars
+        </h1>
+        <p className="text-gray-600">
+          We have covered each & every service that you require to provide best
+          wedding experience.
+        </p>
+      </div>
+
+      {/* Category Tabs */}
+      <div className="flex flex-wrap items-center justify-between mb-8">
+        <div className="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              className={`
+                px-4 py-2 rounded-full text-sm font-medium transition-colors
+                ${
+                  selectedCategory === category.name
+                    ? "bg-amber-500 text-white"
+                    : "text-gray-700 hover:text-amber-600"
+                }
+              `}
+              onClick={() => setSelectedCategory(category.name)}
+            >
+              {category.name} ({category.count})
+            </button>
+          ))}
+        </div>
+        <Link
+          href="/services/all"
+          className="text-xs text-gray-500 hover:text-amber-600 transition-colors flex items-center gap-1 ml-4"
+        >
+          View all services <span className="text-sm">↗</span>
+        </Link>
+      </div>
+
+      {/* Service Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {sortedServices.map((service) => {
+          const isFeatured = service.featured === true;
+
+          return (
+            <div
+              key={service.id}
+              className={`
+                relative overflow-hidden cursor-pointer border border-gray-100 hover:border-gray-200 transition-all duration-300
+                ${
+                  isFeatured
+                    ? "col-span-1 bg-gray-800 text-white h-[300px] w-full"
+                    : "h-[300px] p-2"
+                }
+              `}
+            >
+              {/* Image Section */}
+              <div
+                className={`
+                  relative w-full overflow-hidden
+                  ${isFeatured ? "h-[220px]" : "h-[220px] rounded-2xl"}
+                `}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 z-10"></div>
+
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+                  className="object-cover"
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                />
+
+                {!isFeatured && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleFavorite(service.id);
+                    }}
+                    className="absolute top-3 right-3 z-20 bg-white p-1.5 rounded-full shadow-sm hover:shadow"
+                  >
+                    {favorites.includes(service.id) ? (
+                      <HeartIconSolid className="h-5 w-5 text-red-500" />
+                    ) : (
+                      <HeartIcon className="h-5 w-5 text-gray-400" />
+                    )}
+                  </button>
+                )}
+              </div>
+
+              {/* Text Section */}
+              <div className={`p-4 ${isFeatured ? "bg-gray-800" : "bg-white"}`}>
+                <h3
+                  className={`
+                    font-domine
+                    ${
+                      isFeatured
+                        ? "font-semibold text-lg text-white"
+                        : "font-medium text-gray-800"
+                    }
+                  `}
+                >
+                  {service.name}
+                </h3>
+
+                {isFeatured ? (
+                  <p className="text-sm text-gray-300">{service.subtext}</p>
+                ) : (
+                  <div className="flex items-center gap-1 mt-1">
+                    <span className="text-xs text-gray-500">From</span>
+                    <span className="text-base font-semibold text-amber-600">
+                      Rs. {service.price?.toLocaleString()}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default Banner;
+export default ServicesPage;
